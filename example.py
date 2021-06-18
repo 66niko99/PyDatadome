@@ -21,11 +21,7 @@ req = s.post('https://www.example.com', data={'username': 'joe', 'password': 'bo
 if isRequestDatadome(req):
     # shiver me timbers! datadome! simply pass the request and datadome cookie to your datadome handler, and it
     # returns a valid /check endpoint.
-
     datadomeEndpoint = ddHandler.handleRequest(request=req, datadomeCookie=s.cookies.get('datadome'))
-
-    url = ddHandler.buildUrlFromDict(ddHandler.buildDictFromResponse(req.text),
-                                     datadomeCookie=s.cookies.get('datadome'), request=req)
 
     # make a GET request to the endpoint and the response will be a new datadome cookie!
     # note that if your recaptcha response was invalid, this will give you a 403/404 error or a blank page
