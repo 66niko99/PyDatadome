@@ -1,6 +1,6 @@
 # PyDatadome
 
-PyDatadome is a library to help you solve ReCaptcha based datadome. This library currently does not work with sites using funcaptcha, only ReCaptcha.
+PyDatadome is a library to help you solve ReCaptcha based datadome. This library currently does not work with sites using funcaptcha/geetest, only ReCaptcha.
 
 ## Installation
 
