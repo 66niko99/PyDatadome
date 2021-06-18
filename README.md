@@ -72,9 +72,6 @@ if isRequestDatadome(req):
 
     datadomeEndpoint = ddHandler.handleRequest(request=req, datadomeCookie=s.cookies.get('datadome'))
 
-    url = ddHandler.buildUrlFromDict(ddHandler.buildDictFromResponse(req.text),
-                                     datadomeCookie=s.cookies.get('datadome'), request=req)
-
     # make a GET request to the endpoint and the response will be a new datadome cookie!
     # note that if your recaptcha response was invalid, this will give you a 403/404 error or a blank page
     checkDatadome = s.get(datadomeEndpoint)
